@@ -8,6 +8,12 @@ public class SerialGenerator {
     private String upperAlphabet = alphabet + alphabet.toUpperCase();
     private char divisorCharactere = '-';
 
+    /**
+     * This method returns a sequence of randomic numbers.
+     * @param n_groups The number of groups.
+     * @param n_char The number of characteres of a group.
+     * @return A String with the groups of charactere, divide by divisorCharactere.
+     */
     public String generateNumberSerial(int n_groups, int n_char) {
 
         String serial = "";
@@ -32,6 +38,14 @@ public class SerialGenerator {
 
     }
 
+    /**
+     * This method returns a sequence of randomic numbers and letters. <br/>
+     * The probability of letters appears is fixed on 50%.
+     * @param n_groups The number of groups.
+     * @param n_char The number of characteres of a group.
+     * @param isCaseSensitive Allow case distinct.
+     * @return A String with the groups of charactere, divide by divisorCharactere.
+     */
     public String generateAlphaNumericSerial(int n_groups, int n_char, boolean isCaseSensitive) {
 
         String serial = "";
@@ -56,7 +70,7 @@ public class SerialGenerator {
                 } else {
 
                     serial += Integer.toString(r.nextInt(10));
-                    
+
                 }
 
             }
