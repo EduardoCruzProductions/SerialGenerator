@@ -25,6 +25,7 @@ public class Main {
             System.out.println("Insert the number of charactere of a group:");
             n_char = e.nextInt();
 
+            e = new Scanner(System.in);
             System.out.println("Do you want to put letters? (y/n)");
             String temp = e.nextLine();
 
@@ -35,7 +36,7 @@ public class Main {
             } else {
                 proceed = false;
             }
-
+            
             System.out.println("Is case sensetive? (y/n)");
             temp = e.nextLine();
 
@@ -55,8 +56,8 @@ public class Main {
             }
 
         } catch (Exception ex) {
-            proceed = false;
             
+            proceed = false;
             System.err.println("Error!");
             
         }
@@ -68,13 +69,13 @@ public class Main {
             if (permitLetter) {
 
                 for (int i = 0; i < runTime; i++) {
-                    sg.generateAlphaNumericSerial(n_groups, n_char, permitCaseSensitive);
+                    System.out.println(sg.generateAlphaNumericSerial(n_groups, n_char, permitCaseSensitive));
                 }
 
             } else {
 
                 for (int i = 0; i < runTime; i++) {
-                    sg.generateNumberSerial(n_groups, n_char);
+                    System.out.println(sg.generateNumberSerial(n_groups, n_char));
                 }
                 
             }
