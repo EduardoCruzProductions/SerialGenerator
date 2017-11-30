@@ -65,7 +65,7 @@ public class Main {
         if (proceed) {
 
             SerialGenerator sg = new SerialGenerator();
-
+            
             if (permitLetter) {
 
                 for (int i = 0; i < runTime; i++) {
